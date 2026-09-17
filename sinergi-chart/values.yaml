@@ -1,0 +1,59 @@
+# =========================
+# Frontend - Vue
+# =========================
+frontend:
+  replicaCount: 2
+
+  image:
+    repository: hudaaaja/vue-frontend
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  service:
+    type: ClusterIP
+    port: 80
+
+
+# =========================
+# Backend - Laravel
+# =========================
+laravel:
+  replicaCount: 2
+
+  image:
+    repository: hudaaaja/laravel-backend
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  service:
+    type: ClusterIP
+    port: 80
+
+  env:
+    APP_ENV: production
+    APP_DEBUG: "false"
+    APP_URL: http://laravel
+
+
+# =========================
+# PostgreSQL
+# =========================
+postgres:
+  database: sinergi
+  username: sinergi
+  password: "123"
+
+  service:
+    port: 5432
+
+  storage:
+    size: 5Gi
+
+
+# =========================
+# Ingress
+# =========================
+ingress:
+  enabled: true
+
+  host: accounting.mhuda.my.id
