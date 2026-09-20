@@ -49,6 +49,10 @@ postgres:
   storage:
     size: 5Gi
 
+  image:
+    repository: pgvector/pgvector
+    tag: "pg17"
+    pullPolicy: IfNotPresent
 
 # =========================
 # Ingress
