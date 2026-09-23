@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: accounting
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/HudaaTsz/argo-cd.git
+    targetRevision: main
+    path: sinergi-chart
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: accounting
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
