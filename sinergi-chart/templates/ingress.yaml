@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: sinergi.local
+    - host: accounting.mhuda.my.id
       http:
         paths:
           - path: /api
