@@ -15,7 +15,7 @@ spec:
               service:
                 name: laravel
                 port:
-                  number: 9000
+                  number: 80
 
           - path: /
             pathType: Prefix
