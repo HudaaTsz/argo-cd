@@ -6,7 +6,7 @@ frontend:
 
   image:
     repository: hudaaaja/vue-frontend
-    tag: "1.0.0"
+    tag: "1.0.1"
     pullPolicy: IfNotPresent
 
   service:
@@ -22,7 +22,7 @@ laravel:
 
   image:
     repository: hudaaaja/laravel-backend
-    tag: "1.0.0"
+    tag: "1.0.1"
     pullPolicy: IfNotPresent
 
   service:
