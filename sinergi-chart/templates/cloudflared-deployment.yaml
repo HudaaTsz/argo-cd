@@ -18,6 +18,8 @@ spec:
           image: cloudflare/cloudflared:latest
           args:
             - tunnel
+            - --protocol
+            - http2
             - --no-autoupdate
             - run
           env:
